@@ -61,7 +61,7 @@ export default function Tour({ tour }) {
   };
 
   return (
-    <Paper elevation="10" style={{ margin: "20px" }}>
+    <Paper style={{ margin: "20px" }}>
       <Card sx={{ width: 300 }}>
         <CardHeader
           avatar={

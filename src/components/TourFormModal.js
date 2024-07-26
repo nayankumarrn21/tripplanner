@@ -93,7 +93,7 @@ const TourFormModal = ({ open, onClose, data, flag }) => {
             <Paper elevation={3} sx={{ p: 3 }}>
               <Box component="form" onSubmit={handleSubmit}>
                 <TextField
-                  label="Name"
+                  label="Tour Name"
                   name="name"
                   value={tour.name}
                   onChange={handleChange}
@@ -136,6 +136,7 @@ const TourFormModal = ({ open, onClose, data, flag }) => {
                   />
                   <TextField
                     sx={{ ml: 2 }}
+                    label="Place Type"
                     name="placeType"
                     value={tour.placeType}
                     onChange={handleChange}
@@ -153,6 +154,7 @@ const TourFormModal = ({ open, onClose, data, flag }) => {
                     <option value="Shopping Mall">Shopping Mall</option>
                   </TextField>
                   <IconButton
+                    aria-label="addPlace"
                     color="primary"
                     onClick={handleAddPlace}
                     sx={{ ml: 2 }}
@@ -168,14 +170,12 @@ const TourFormModal = ({ open, onClose, data, flag }) => {
                         sx={{ display: "flex", alignItems: "center", mb: 1 }}
                       >
                         <TextField
-                          label="Place Name"
                           value={place.name}
                           disabled
                           fullWidth
                           margin="normal"
                         />
                         <TextField
-                          label="Place Type"
                           value={place.type}
                           disabled
                           fullWidth

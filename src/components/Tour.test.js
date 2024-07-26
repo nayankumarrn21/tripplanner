@@ -4,7 +4,6 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Tour from "./Tour";
 import fetchRandomVacationImage from "../services/unsplashApi";
 import TourDetailModal from "./TourDetailModal";
-import TourFormModal from "./TourFormModal";
 
 jest.mock("../services/unsplashApi", () => ({
   __esModule: true,
@@ -50,9 +49,7 @@ describe("Tour Component", () => {
 
   test("opens TourDetailModal when view button is clicked", () => {
     render(<Tour tour={mockTour} />);
-
     fireEvent.click(screen.getByLabelText("view"));
-
     expect(screen.getByTestId("tour-detail-modal")).toBeInTheDocument();
   });
 

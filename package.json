@@ -11,6 +11,7 @@
     "@mui/lab": "^5.0.0-alpha.171",
     "@mui/material": "^5.16.0",
     "@mui/x-date-pickers": "^7.9.0",
+    "@reduxjs/toolkit": "^2.2.6",
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
@@ -27,6 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
+    "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage --transformIgnorePatterns 'node_modules/(?!axios)/'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
